@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>El-niniPower — Financial Safety</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #021f3f, #006ca2);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      opacity: 0.8;
+    }
+  </style>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    const short = lang.slice(0, 2).toLowerCase();
+
+    let url = "https://click.uz/en/moliyaviyxavfsizlik"; // по умолчанию
+
+    if (short === "ru") {
+      url = "https://click.uz/ru/moliyaviyxavfsizlik";
+    } else if (short === "uz") {
+      url = "https://click.uz/uz/moliyaviyxavfsizlik";
+    }
+
+    setTimeout(() => {
+      window.location.href = url;
+    }, 1000);
+  </script>
+</head>
+<body>
+  <h1>El-niniPower</h1>
+  <p>Идёт перенаправление на страницу финансовой безопасности…</p>
+</body>
+</html>
