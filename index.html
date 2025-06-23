@@ -5,24 +5,33 @@
   <title>El-niniPower — Financial Safety</title>
   <style>
     body {
-      background: linear-gradient(to bottom right, #021f3f, #006ca2);
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding-top: 100px;
+      margin: 0;
+      background-color: #1e1e1e; /* тёмный фон */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    h1 {
-      font-size: 2em;
+
+    .loader {
+      width: 40px;
+      height: 40px;
+      border: 4px solid transparent;
+      border-top: 4px solid #2196f3; /* синий цвет */
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
     }
-    p {
-      opacity: 0.8;
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
   <script>
     const lang = navigator.language || navigator.userLanguage;
     const short = lang.slice(0, 2).toLowerCase();
 
-    let url = "https://click.uz/en/moliyaviyxavfsizlik"; // по умолчанию
+    let url = "https://click.uz/en/moliyaviyxavfsizlik"; // default
 
     if (short === "ru") {
       url = "https://click.uz/ru/moliyaviyxavfsizlik";
@@ -36,7 +45,6 @@
   </script>
 </head>
 <body>
-  <h1>El-niniPower</h1>
-  <p>Идёт перенаправление на страницу финансовой безопасности…</p>
+  <div class="loader"></div>
 </body>
 </html>
